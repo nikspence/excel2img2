@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "excel2img2"
+version = "0.1.0"
+description = "Capture Excel sheets and ranges as Pillow images in memory"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "Nikolaus Spence"}]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+    "Topic :: Office/Business :: Office Suites",
+]
+dependencies = [
+    "Pillow>=9",
+    "pywin32>=300; sys_platform == 'win32'",
+]
+
+[tool.setuptools]
+packages = ["excel2img2"]
+include-package-data = false
